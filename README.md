@@ -16,8 +16,8 @@ Heroes of JavaScript and Magic III is a web implementation of the iconic Heroes 
 - 🤖 AI-powered opponent for challenging single-player experience (in development)
 
 ## Technologies
-- React 19.0.0
-- Vite 6.2.0
+- React 19.2.1
+- Vite 7.2.7
 - JavaScript ES6+
 - HTML5 Canvas for graphics rendering
 - CSS3 for interface styling
@@ -25,21 +25,21 @@ Heroes of JavaScript and Magic III is a web implementation of the iconic Heroes 
 ## Installation and Running
 ### Prerequisites
 - Node.js (recommended version: 18.x or newer)
-- npm (included with Node.js)
+- pnpm (recommended package manager)
 
 ### Installation Steps
 1. Clone the repository:
 ``` bash
-   git clone https://github.com/troyanvic/homm3-js.git
-   cd homm3-js
+   git clone https://github.com/troyanvic/homm3-js-clone.git
+   cd homm3-js-clone
 ```
 1. Install dependencies:
 ``` bash
-   npm install
+   pnpm install
 ```
 1. Run the project in development mode:
 ``` bash
-   npm run dev
+   pnpm dev
 ```
 1. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
