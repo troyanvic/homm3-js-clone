@@ -19,7 +19,7 @@ Heroes of JavaScript and Magic III is a web-based reimplementation of the classi
 - JavaScript ES6+ (may transition to TypeScript)
 - HTML5 Canvas for game graphics rendering
 
-**Development Status:** Dependencies installed. Configuration files and src/ directory structure need to be established.
+**Development Status:** Dependencies installed. Configuration files created. Basic project structure established with responsive game screen (800x600 @ 4:3 aspect ratio, scales up to 2x).
 
 **Package Manager:** This project uses pnpm for dependency management.
 
@@ -53,7 +53,7 @@ pnpm test:watch
 pnpm test:coverage
 ```
 
-**Note:** Configuration files (vite.config.js, eslint.config.js, vitest.config.js) still need to be created.
+**Note:** Configuration files are in place. The game uses a responsive scaling system that maintains the original 800x600 resolution with a 4:3 aspect ratio.
 
 ## Architecture Considerations
 
@@ -146,9 +146,9 @@ The project uses Vitest as the test runner and React Testing Library for compone
 - Maintain test coverage with `pnpm test:coverage`
 - Mock Canvas API for rendering tests when needed
 
-## Project Structure (To Be Established)
+## Project Structure
 
-When setting up the codebase, organize around game systems rather than technical layers:
+The codebase is organized around game systems rather than technical layers:
 
 ```
 src/
@@ -170,23 +170,33 @@ src/
 
 ## Next Steps
 
-The following configuration and setup tasks remain:
+The following tasks are planned for implementation:
 
-1. **Configuration Files**
-   - Create `vite.config.js` with Vite and plugin configuration
-   - Create `eslint.config.js` for linting rules
-   - Create `vitest.config.js` for test configuration (or integrate with Vite config)
-   - Create `.prettierrc` for code formatting rules
+1. **Minimum Resolution Warning**
+   - Add a warning message that displays when the viewport is smaller than 800x600
+   - Inform users that the game requires a minimum screen resolution of 800x600 to run properly
+   - Consider blocking game interaction or showing an overlay until minimum resolution is met
 
-2. **Project Structure**
-   - Set up the `src/` directory structure
-   - Create entry point files (`main.jsx`, `App.jsx`)
-   - Set up `index.html` in the project root
+2. **Audio System Setup**
+   - Implement audio effects system for game interactions
+   - Request user agreement/permission before playing audio (browser autoplay policies)
+   - Set up audio asset loading and management
+   - Create audio controls for volume adjustment and muting
 
-3. **Initial Setup**
+3. **Redux Store Configuration**
    - Configure Redux store with provider
+   - Create initial slices for game state management
+   - Set up Redux DevTools integration
+
+4. **Internationalization Setup**
    - Set up i18next with initial locale files
-   - Create base UI layout and routing structure
+   - Implement language switching functionality
+   - Create translation namespaces for different game systems
+
+5. **Base Game UI**
+   - Create main menu screen
+   - Implement navigation structure
+   - Design and build core UI components matching HoMM3 aesthetic
 
 ## Important Notes
 
