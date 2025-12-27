@@ -1,3 +1,6 @@
+// import styles
+import "@styles/_reset.scss";
+
 export default function App() {
   return <h1>Heroes of JavaScript and Magic III</h1>;
 }
